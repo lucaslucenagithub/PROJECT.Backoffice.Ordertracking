@@ -1,0 +1,62 @@
+﻿@model List<Status_Pedido.ViewModels.ListaPedidosViewModel>
+
+@{
+    ViewBag.Title = "Lista de Pedidos";
+}
+
+<hr />
+<div>
+    @if (TempData["ServerConnException"] != null)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-warning" style="
+                 margin-top: 30px;">
+                    @TempData["ServerConnException"]
+                </div>
+            </div>
+        </div>
+    }
+    else if (TempData["NoOrderException"] != null)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-warning" style="
+                 margin-top: 30px;">
+                    @TempData["NoOrderException"]
+                </div>
+            </div>
+        </div>
+    }
+    else if (TempData["DocException"] != null)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-warning" style="
+                 margin-top: 30px;">
+                    @TempData["DocException"]
+                </div>
+            </div>
+        </div>
+    }
+    else if (Model != null && Model.Count > 0)
+    {
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@Html.ActionLink(item.Pedido + " - " + item.Status ?? "Sem status", "Mostrar_Status_PedidoLista", "Statuspedido", new { CodigoPedido = item.Pedido, Status = item.Status, DataPedido = item.DataPedido, DataAtualizacao = item.DataAtualizacao, ValorPedido = item.ValorPedido, NomeCliente = item.NomeCliente }, null)</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-warning" style="
+                 margin-top: 30px;">
+                    Não foram encontrados pedidos para listar, volte para o ínicio e tente novamente.
+                </div>
+            </div>
+        </div>
+    }
+</div>

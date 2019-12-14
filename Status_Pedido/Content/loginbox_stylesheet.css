@@ -1,0 +1,296 @@
+﻿.login {
+    font-size: 1.3em;
+    font-family: 'Titillium Web', sans-serif;
+    color: #5b506d;
+    background-color: #f0efed;
+    width: 100%;
+    height: 100%;
+}
+
+    .login h3 {
+        border-bottom: 1px solid #cdccce;
+        color: #46384b;
+        padding: 15px 0;
+        margin-bottom: 22px;
+        margin-top: 0;
+        font-size: 1.3em;
+        font-weight: 100;
+    }
+
+.login__box {
+    background-color: #fff;
+    padding: 20px 20px 200px 20px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin-top: 50px
+}
+
+.login .formulario {
+    width: 206px;
+}
+
+    .login .formulario label {
+        color: #46384b;
+        width: 100%;
+        font-size: 1.3em;
+        font-weight: 100;
+    }
+
+    .login .formulario button {
+        font-size: 1.1em;
+        padding: 2.5px;
+        width: 90%;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        -webkit-box-shadow: 0 5px 5px 1px rgba(193,193,193,1);
+        -moz-box-shadow: 0 5px 5px 1px rgba(193,193,193,1);
+        box-shadow: 0 5px 5px 1px rgba(193,193,193,1);
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+.btn-default {
+    color: #7f1d85;
+    background-color: #fff13b;
+    border-color: #ccc;
+}
+
+    /*.btn-default:hover {
+        color: #7f1d85;
+        background-color: #f0efed;
+        border-color: #adadad;
+    }*/
+
+.btn-visualizar {
+    background-color: #027e25;
+    font-size: .8em;
+    padding: 3px 22px;
+    color: #fff;
+    vertical-align: sub;
+    margin: 20px 0 0 0;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    display: initial;
+}
+
+    .btn-visualizar:hover {
+        color: #fff;
+        background-color: #449d44;
+        border-color: #398439;
+    }
+
+    .btn-visualizar:active {
+        position: relative;
+        top: 1px;
+    }
+
+.btn-buscar {
+    background-color: #027e25;
+    font-size: .7em;
+    margin-left: 11px;
+    padding: 2px 35px;
+    color: #fff;
+    vertical-align: super;
+    margin-top: 25px;
+}
+
+    .btn-buscar:hover {
+        color: #fff;
+        background-color: #449d44;
+        border-color: #398439;
+    }
+
+    .btn-buscar:active {
+        position: relative;
+        top: 1px;
+    }
+
+.margin-line {
+    margin-bottom: 20px;
+}
+
+.recuperar__caixadados--dadospessoais {
+    border-top: 1px solid #cdccce;
+    overflow: hidden;
+    padding: 10px 0 0 0;
+    margin: -25px 0 0 0;
+}
+
+.pedido__caixadados--dadospessoais {
+    padding: 25px 0 25px 0;
+}
+
+.box-numero-pedido {
+    padding-top: 15px;
+}
+
+ol, ul {
+    margin-top: 0;
+}
+
+.etapa__description {
+    margin-bottom: 50px;
+    background-color: #3a2776;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.head-logo {
+    display: inline-block;
+}
+
+.align-left {
+    float: left;
+}
+
+.align-rigth {
+    float: right;
+}
+
+.width-box {
+    width: 100%;
+}
+
+a {
+    color: #0b80e4;
+    display: block;
+    text-align: center;
+}
+
+    #EsqueciPedido {
+        color: #0b80e4;
+        display: block;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.header-buttons {
+    background-color: #cdcdcd;
+    padding: 10px 0 10px 0;
+}
+
+.form-modal {
+    margin: auto;
+    width: 220px;
+}
+
+.head-modal {
+    padding: 30px;
+}
+
+.title-modal-h4 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.2em;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+}
+
+.subtitle-modal-h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #727272;
+    border-bottom: solid 1px #cdccce;
+    padding: 0 0 20px 0;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.modal-close {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 3em;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    top: -20px;
+    right: 15px;
+    display: block;
+    cursor: pointer;
+}
+
+.label-modal {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.3em;
+    font-weight: 100;
+    color: #6b6b6b;
+}
+
+.modal-backdrop.in {
+    opacity: 0.8;
+}
+
+.margin-row {
+    margin-bottom: 15px;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #f0efed;
+}
+
+.text-danger {
+    color: #D8000C;
+    font-size: 0.699em;
+}
+
+.form-control {
+    display: block;
+    margin-top: 2px;
+    width: 100%;
+    height: 30px;
+    padding: 2px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 100;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header__acompanhamento {
+    font-size: 1.6em;
+    padding: 3px;
+}
+
+    .header__acompanhamento h2 {
+        font-size: 1.2em
+    }
+
+.header__logocd {
+    background-position: 0
+}
+
+.container {
+    width: 950px
+}
+
+.circulo-off, .circulo-processando, .circulo-sucesso {
+    margin-left: 40px
+}

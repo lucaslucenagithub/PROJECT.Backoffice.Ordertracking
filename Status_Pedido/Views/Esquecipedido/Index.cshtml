@@ -1,0 +1,44 @@
+﻿@model Status_Pedido.ViewModels.EsqueciPedidoDocViewModel
+
+@{
+                /**/
+
+                ViewBag.Title = "Consultar Por Documento";
+}
+
+<section class="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 login__box">
+                <h3 class="text-center">Digite seu CPF/CNPJ para que possamos encontrar seu pedido</h3>
+                <!-- login -->
+                <hr />
+                @using (Html.BeginForm("Inserir_Documento", "Esquecipedido", FormMethod.Post))
+                {@Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <label for="pedido" class="center-block formulario">
+                        Documento:
+                        @Html.EditorFor(model => model.Document, new { htmlAttributes = new { @class = "form-control", id = "cpfcnpj" } })
+                        @Html.ValidationMessageFor(model => model.Document, "", new { @class = "text-danger" })
+                        <button type="submit" id="btnSubmitDados" class="btn btn-default"> Procurar</button>
+                    </label>
+                </div>
+            }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+            $("#cpfcnpj").inputmask({ mask: ["999.999.999-99", "99.999.999/9999-99"] });
+
+        });
+    </script>
+
+    @Scripts.Render("~/bundles/jqueryval")
+}

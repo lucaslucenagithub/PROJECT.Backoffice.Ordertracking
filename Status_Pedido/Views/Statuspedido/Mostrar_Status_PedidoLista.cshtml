@@ -1,0 +1,160 @@
+﻿@model Status_Pedido.ViewModels.PedidoViewModel
+
+@{
+
+    ViewBag.Title = "Status dos Pedidos";
+}
+
+@* Fazer tratamento quando o pedido estiver cancelado total e parcial*@
+
+@if (TempData["ServerConnException"] != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-warning" style="
+                 margin-top: 30px;">
+                @TempData["ServerPortConException"]
+            </div>
+        </div>
+    </div>
+}
+else if (TempData["JsonException"] != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-warning" style="
+                 margin-top: 30px;">
+                @TempData["JsonException"]
+            </div>
+        </div>
+    </div>
+}
+else if (Model != null)
+{
+    if (Model.Status != null)
+    {
+        if (Model.Status.Contains("EM DIGITACAO"))
+        {
+            <hr />
+            <!-- Controlamos a qtde de passos pelo data e
+            controlamos onde está pelo progtrckr-done/todo -->
+            <ol class="progtrckr" data-progtrckr-steps="4">
+                <li class="progtrckr-done">Em digitacao</li>
+                <!--
+                -->
+                <li class="progtrckr-todo">Em Analise</li>
+                <!--
+                -->
+                <li class="progtrckr-todo">Em Separacao</li>
+                <!--
+                -->
+                <li class="progtrckr-todo">Entregue a Transportadora</li>
+            </ol>
+        }
+        else if (Model.Status.Contains("EM ANALISE"))
+        {
+            <hr />
+            <!-- Controlamos a qtde de passos pelo data e
+            controlamos onde está pelo progtrckr-done/todo -->
+            <ol class="progtrckr" data-progtrckr-steps="4">
+                <li class="progtrckr-done">Em digitacao</li>
+                <!--
+                -->
+                <li class="progtrckr-done">Em Analise</li>
+                <!--
+                -->
+                <li class="progtrckr-todo">Em Separacao</li>
+                <!--
+                -->
+                <li class="progtrckr-todo">Entregue a Transportadora</li>
+            </ol>
+        }
+        else if (Model.Status.Contains("EM SEPARACAO"))
+        {
+            <hr />
+            <!-- Controlamos a qtde de passos pelo data e
+            controlamos onde está pelo progtrckr-done/todo -->
+            <ol class="progtrckr" data-progtrckr-steps="4">
+                <li class="progtrckr-done">Em digitacao</li>
+                <!--
+                -->
+                <li class="progtrckr-done">Em Analise</li>
+                <!--
+                -->
+                <li class="progtrckr-done">Em Separacao</li>
+                <!--
+                -->
+                <li class="progtrckr-todo">Entregue a Transportadora</li>
+            </ol>
+        }
+        else if (Model.Status.Contains("ENTREGUE A TRANSPORTADORA"))
+        {
+            <hr />
+            <!-- Controlamos a qtde de passos pelo data e
+            controlamos onde está pelo progtrckr-done/todo -->
+            <ol class="progtrckr" data-progtrckr-steps="4">
+                <li class="progtrckr-done">Em digitacao</li>
+                <!--
+                -->
+                <li class="progtrckr-done">Em Analise</li>
+                <!--
+                -->
+                <li class="progtrckr-done">Em Separacao</li>
+                <!--
+                -->
+                <li class="progtrckr-done">Entregue a Transportadora</li>
+            </ol>
+        }
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-warning" style="
+                 margin-top: 30px;">
+                    Pedido sem Status, entre em contato com o suporte caso acha errado.
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+    <br />
+    <h4>Mais detalhes:</h4>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <span class="prefix">Código Pedido:</span>
+            <span class="label label-success">@(Model.Pedido ?? "Sem Pedido")</span>
+        </li>
+        <li class="list-group-item">
+            <span class="prefix">Cliente:</span>
+            <span class="label label-success">@(Model.NomeCliente ?? "Sem Cliente")</span>
+        </li>
+        <li class="list-group-item">
+            <span class="prefix">Data Pedido:</span>
+            <span class="label label-success">@(Model.DataPedido ?? "Sem Data Emissao")</span>
+        </li>
+        <li class="list-group-item">
+            <span class="prefix">Status:</span>
+            <span class="label label-success">@(Model.Status ?? "Sem Status")</span>
+        </li>
+        <li class="list-group-item">
+            <span class="prefix">Data atualizacao:</span>
+            <span class="label label-success">@(Model.DataAtualizacao ?? "Sem Data de Atualização disponível")</span>
+        </li>
+        <li class="list-group-item">
+            <span class="prefix">Valor Total do Pedido:</span>
+            <span class="label label-success">@("R$ " + Model.ValorPedido ?? "Sem Valor")</span>
+        </li>
+    </ul>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-warning" style="
+                 margin-top: 30px;">
+                Ocorreu um erro, volte para o ínicio e tente novamente.
+            </div>
+        </div>
+    </div>
+}
