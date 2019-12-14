@@ -17,7 +17,7 @@ namespace Status_Pedido
                 //Chama apenas uma instancia do HttpClient, pois nao é muito aconselhável ter várias por ai pelo seu código!
                 httpClientInstance = new HttpClient();
                 //Chama a autenticacao no método!
-                httpClientInstance.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", "YWRtaW5pc3RyYXRvcjp2dGFUUFJAMjAxOSoq");
+                httpClientInstance.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", "BasicAuthGenerateKey");
                 //Mantém o 'Keep Alive' online!
                 httpClientInstance.DefaultRequestHeaders.ConnectionClose = false;
             }
